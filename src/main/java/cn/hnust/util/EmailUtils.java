@@ -54,7 +54,7 @@ public class EmailUtils {
 		Authenticator auth = new Authenticator() {
 			protected PasswordAuthentication getPasswordAuthentication() {
                                //第一个为用户名，第二个为POP3/SMTP的密码
-				return new PasswordAuthentication("1786082175","kkkwqkqevrlqbfbb");
+				return new PasswordAuthentication("用户名（qq号）","pop3/smtp密码（需要自行到qq邮箱开启）");
 				
 			}
 		};
