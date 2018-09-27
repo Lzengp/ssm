@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hnust.mapper.UserMapper">
+ <insert id="insertUser" parameterType="cn.hnust.po.User">
+ 	insert into m_user(username,password,email,activated,codeurl)
+    values (#{userName}, #{password,}, #{email},#{activated},#{codeUrl})
+ </insert>
+ <select id="findByUserName" parameterType="java.lang.String"  resultType="cn.hnust.po.User">
+ 	select * from m_user where username=#{username}
+ </select>
+ 
+ <select id="findUserByEmail" parameterType="java.lang.String"  resultType="cn.hnust.po.User">
+ 	select * from m_user where email=#{email}
+ </select>
+ 
+ <select id="findUserById" parameterType="java.lang.Integer"  resultType="cn.hnust.po.User">
+ 	select * from m_user where id=#{idInt}
+ </select>
+ 
+ <update id="updateActivated"  parameterType="cn.hnust.po.User" >
+ 	update m_user set activated=#{activated} where id=#{id}
+ </update>
+ 
+</mapper>
